@@ -5,7 +5,7 @@
 <meta name="theme-color" content="#18130e">
 <meta name="description" content="Inside the Systems — an immersive archive of architecture, history and beautiful forgotten stories.">
 <title>Inside the Systems | The Living Archive</title>
-<link rel="icon" href="logo.jpg">
+<link rel="icon" href="Insidethesystem.jfif">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -168,6 +168,42 @@ html{scroll-padding-top:24px}body{min-width:320px}button,a,input,select,textarea
 @media(max-width:370px){.hero h1{font-size:51px}.hero .buttons{flex-direction:column;align-items:stretch;width:min(290px,100%)}.hero .buttons .action{width:100%}.brand{font-size:9px}.gallery{grid-template-columns:1fr 1fr}}
 @media(pointer:coarse){#candlelight{display:none!important}.hero-bg,.hero .parallax-arch{will-change:auto}.paper .dust{opacity:.24;mask-image:none!important}.relic .relic-dust{opacity:.75}.relic.uncovered .relic-dust{opacity:0}}
 @media(prefers-reduced-motion:reduce){.hero-bg,.hero .parallax-arch{transform:none!important}.paper,.sealed-letter{transform:none!important}#candlelight,#particles{display:none!important}}
+
+/* Archive refinement: legible ink and suspended papers on every screen */
+.paper,.paper .paper-inner,.paper .paper-inner:before,.paper h3,.paper .edition,.paper p,.paper a{color:#302315!important;text-shadow:none!important}
+.paper h3{color:#2a1c11!important}.paper .edition{color:#634329!important}.paper p{color:#503a25!important}.paper a{color:#53331b!important;text-decoration:none!important}
+.paper a:hover,.paper a:focus-visible{color:#8b3d22!important;text-decoration:underline!important}
+.sealed-letter,.sealed-letter h3,.sealed-letter small{color:#352416!important;text-shadow:none!important}
+.sealed-letter .letter-index{color:#634329!important}
+@media(max-width:600px){
+ .archive{overflow:hidden}
+ .archive .introtext{margin-bottom:36px}
+ .paper-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:45px 13px;align-items:start;max-width:440px;margin:0 auto;padding:30px 3px 8px;perspective:900px;overflow:visible}
+ .paper,.paper:nth-child(2),.paper:nth-child(3){box-sizing:border-box;width:100%;max-width:none;min-width:0;min-height:0;margin:0;justify-self:stretch;padding:12px 9px 12px;transform:rotate(var(--r));box-shadow:4px 9px 20px #080604a8,inset 0 0 22px #6e4c2a33}
+ .paper:nth-child(1){--r:-5deg;margin-top:12px}
+ .paper:nth-child(2){--r:5deg;margin-top:0}
+ .paper:nth-child(3){--r:-3deg;grid-column:1/-1;width:calc(50% - 7px);justify-self:center;margin-top:-5px}
+ .paper:before{top:-31px;height:31px;background:linear-gradient(90deg,#8d6a40,#d5b88a,#8d6a40);width:2px}
+ .paper:after{width:9px;height:9px;left:calc(50% - 4.5px);top:-5px;background:#896235}
+ .paper .paper-inner{min-height:0;height:100%;padding:9px 6px 10px;border-color:#73563591}
+ .paper .paper-inner:before{font-size:6px;letter-spacing:.04em;padding-bottom:7px}
+ .paper .edition{font-size:7px;letter-spacing:.06em;margin:9px 0 7px}
+ .paper h3{font-size:clamp(20px,5.7vw,27px);line-height:1.02;margin-bottom:9px;overflow-wrap:break-word}
+ .paper .paper-img{height:clamp(66px,20vw,94px);margin-bottom:9px}
+ .paper p{font-size:clamp(13px,3.7vw,16px);line-height:1.15;margin-bottom:11px}
+ .paper a{font-size:7px;line-height:1.5;letter-spacing:.04em;padding-top:8px;overflow-wrap:anywhere}
+ .paper .dust{opacity:.08!important;mask-image:none!important}
+ .paper:hover,.paper:focus-within{transform:rotate(var(--r)) translateY(-3px);box-shadow:5px 12px 25px #080604b8}
+ .paper.reveal{opacity:1!important;visibility:visible!important}
+}
+@media(max-width:370px){.paper-grid{gap:40px 10px}.paper,.paper:nth-child(2),.paper:nth-child(3){padding:10px 7px}.paper .paper-inner{padding:7px 5px}.paper h3{font-size:19px}.paper p{font-size:12.5px}.paper a{font-size:6.5px}}
+@media(prefers-reduced-motion:no-preference) and (max-width:600px){
+ @keyframes archive-sway{0%,100%{transform:rotate(var(--r))}50%{transform:rotate(calc(var(--r) + 1.1deg))}}
+ .paper:not(:hover):not(:focus-within){animation:archive-sway 8s ease-in-out infinite;transform-origin:50% -31px}
+ .paper:nth-child(2){animation-delay:-2.5s}.paper:nth-child(3){animation-delay:-5s}
+}
+@media(prefers-reduced-motion:reduce){.paper{animation:none!important}}
+
 </style>
 </head>
 <>
