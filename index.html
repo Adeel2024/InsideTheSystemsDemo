@@ -254,6 +254,19 @@ html{scroll-padding-top:24px}body{min-width:320px}button,a,input,select,textarea
 @media(max-width:600px){.cabinet-section,.atlas-section{padding:66px 0}.cabinet-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;margin-top:26px}.artifact{padding:5px}.artifact-niche{height:126px}.artifact-label{padding:10px 4px;gap:7px}.artifact-label small{font-size:7px;letter-spacing:0}.artifact-label strong{font-size:clamp(17px,5vw,22px)}.artifact-label>span{font-size:7px;letter-spacing:0}.artifact-coin{transform:scale(.49) rotate(-14deg);flex-shrink:0}.artifact-vial{transform:scale(.53);flex-shrink:0}.artifact-tile{transform:scale(.52) rotate(8deg);flex-shrink:0}.artifact-story{padding:19px 15px}.artifact-story h3{font-size:31px}.artifact-story p{font-size:15px}.atlas-map{min-height:210px}.map-pin{min-width:45px;min-height:44px}.map-pin span{width:24px;height:24px}.map-pin small{font-size:10px}.atlas-detail h3{font-size:44px;margin:12px 0}.atlas-detail p{font-size:15px}.atlas-detail{padding:22px}.brand .mark{width:35px;height:35px}.ancient-emblem{width:59px;height:59px;font-size:29px}}
 @media(prefers-reduced-motion:reduce){.hero:after{animation:none}.artifact,.map-pin span{transition:none}}
 
+
+/* Mobile newspaper legibility: opaque parchment, solid ink, unobstructed content. */
+@media (max-width: 700px) {
+  #papers .paper { background: #e8d5ac !important; color: #2b1c10 !important; opacity: 1 !important; visibility: visible !important; filter: none !important; }
+  #papers .paper .paper-inner { position: relative !important; z-index: 10 !important; background: #e8d5ac !important; color: #2b1c10 !important; opacity: 1 !important; visibility: visible !important; filter: none !important; mix-blend-mode: normal !important; }
+  #papers .paper .paper-inner > :not(.paper-img) { color: #302012 !important; -webkit-text-fill-color: #302012 !important; opacity: 1 !important; visibility: visible !important; text-shadow: none !important; filter: none !important; mix-blend-mode: normal !important; }
+  #papers .paper .paper-inner .edition { color: #68442b !important; -webkit-text-fill-color: #68442b !important; }
+  #papers .paper .paper-inner p { color: #49311e !important; -webkit-text-fill-color: #49311e !important; }
+  #papers .paper .paper-inner a { color: #56351e !important; -webkit-text-fill-color: #56351e !important; text-decoration: underline !important; text-underline-offset: 3px; }
+  #papers .paper .dust, #papers .paper .tear { display: none !important; }
+  #papers .paper .paper-inner::before { color: #68442b !important; -webkit-text-fill-color: #68442b !important; opacity: 1 !important; }
+}
+
 </style>
 </head>
 <div id="candlelight" aria-hidden="true"></div>
